@@ -23,7 +23,7 @@ def get_residuals(block, order):
         res[0:3] = block[0:3]
         res[3:] = block[3:] - (3*block[2:-1] - 3*block[1:-2] + block[:-3]) 
         res[0:4] = block[0:4]
-        res[4:] = block[4:] - (4*block[3:-1] - 6*block[2:-2] + 4*block[1:-3] - block[:-4]) 
+        res[4:] = block[4:] - (4*block[3:-1] - 6*block[2:-2] + 4*block[1:-3] - block[:-4]) # FIXED SLICE
     return res
 
 def undo_residuals(res, order):
